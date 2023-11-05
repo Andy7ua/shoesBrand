@@ -26,4 +26,6 @@ python main.py
 
 4. Run files in such order: img_resizer, config, model_config, model_compile, tuned_model_compile, main
 
-More information [here](https://t.me/ya_andy_ua)# shoesBrand
+More information [here](https://t.me/ya_andy_ua)
+
+# shoesBrand
