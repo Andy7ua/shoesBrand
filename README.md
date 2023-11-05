@@ -8,7 +8,8 @@ This is ML solution for shoes brand checker
 ```bash
 pip install -r requirements.txt
 ```
-2. Specify parameters (path to images, weight and training parameters) in **config.py** 
+2. Specify parameters (path to images, weight and training parameters) in **config.py**
+3. Ask for trained weight [here](https://t.me/ya_andy_ua)
 
 ### Inference
 Set img_path in main.py and run:
@@ -17,7 +18,7 @@ python main.py
 ```
 
 ### Training your own model 
-1. Upload your own images and specify path to them or use the default
+1. Upload your own images and specify path to them or use the default (which you ask [here](https://t.me/ya_andy_ua))
 
 2. Resize images if it necessary by using img_resizer.py
 
