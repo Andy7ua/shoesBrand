@@ -9,10 +9,10 @@ This is ML solution for shoes brand checker
 pip install -r requirements.txt
 ```
 2. Specify parameters (path to images, weight and training parameters) in **config.py**
-3. Ask for trained weight [here](https://t.me/ya_andy_ua)
 
 ### Inference
-Set img_path in main.py and run:
+1. Ask for trained weight [here](https://t.me/ya_andy_ua)
+2. Set img_path in main.py and run:
 ```bash
 python main.py
 ```
