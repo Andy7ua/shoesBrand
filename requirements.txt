@@ -1,0 +1,10 @@
+Pillow
+keras
+tensorflow
+matplotlib
+gitpython
+numpy
+requests
+scipy
+# Plotting --------------------------------------------------------------------
+
