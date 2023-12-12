@@ -2,7 +2,7 @@ import os
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Activation, Dropout, Flatten, Dense, BatchNormalization
 from tensorflow.keras.applications import VGG16
-from config import train_dir
+from config import classes
 
 gpu_config = False
 if gpu_config:
@@ -10,10 +10,9 @@ if gpu_config:
     physical_devices = tf.config.list_physical_devices('GPU')
     tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
-classes = os.listdir(train_dir)
-img_width, img_height = 104, 104  # modify if it is necessary
+img_width, img_height = 128, 128  # modify if it is necessary
 input_shape = (img_width, img_height, 3)
-batch_size = 128  # modify if it is necessary
+batch_size = 64  # modify if it is necessary
 
 # Upload model weight VGG16
 custom_weights_url = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
