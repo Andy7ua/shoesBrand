@@ -34,13 +34,13 @@ if __name__ == "__main__":
     history = model.fit(
                 train_generator,
                 steps_per_epoch=nb_train_samples // batch_size,
-                epochs=5,
+                epochs=10,
                 validation_data=val_generator,
                 validation_steps=nb_validation_samples // batch_size)
 
     scores = model.evaluate(test_generator)
     print(f"Accuracy on test data: {(scores[1]*100):.2f}")
-    model.save("model_shoes.keras")
+    model.save("model.keras")
 
     plt.plot(history.history['accuracy'])
     plt.plot(history.history['val_accuracy'])
@@ -48,4 +48,5 @@ if __name__ == "__main__":
     plt.ylabel('accuracy')
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Val'], loc='upper left')
+    plt.savefig('model_training.png')
     plt.show()
