@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
-from model_config import vgg16_net, model
+from model_config import vgg16_net, model, batch_size
 from tensorflow.keras.optimizers import Adam
-from model_compile import nb_train_samples, train_generator, val_generator, nb_validation_samples, batch_size, test_generator
+from model_compile import nb_train_samples, train_generator, val_generator, nb_validation_samples, test_generator
 
 vgg16_net.trainable = True
 trainable = False
@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     scores = model.evaluate(test_generator)
     print(f"Accuracy on test data: {(scores[1]*100):.2f}")
-    model.save("tuned_model_shoes.keras")
+    model.save("tuned_model.keras")
 
     plt.plot(history.history['accuracy'])
     plt.plot(history.history['val_accuracy'])
@@ -34,4 +34,5 @@ if __name__ == "__main__":
     plt.ylabel('accuracy')
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Val'], loc='upper left')
+    plt.savefig('tuned_model_training.png')
     plt.show()
