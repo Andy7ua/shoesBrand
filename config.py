@@ -8,7 +8,7 @@ test_dir = 'dataset/test'
 
 val_data_portion = 0.15
 test_data_portion = 0.15
-classes = [name for name in os.listdir(data_dir) if os.path.isdir(os.path.join(data_dir, name)) and name != ".DS_Store"]
+classes = [name for name in os.listdir(train_dir) if os.path.isdir(os.path.join(train_dir, name)) and name != ".DS_Store"]
 
 if __name__ == '__main__':
     def create_directory(dir_name):
