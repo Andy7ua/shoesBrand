@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
 from model_config import img_width, img_height, classes
 
-model_names = ["model_shoes.keras", "tuned_model_shoes.keras", "my_model_1.h5", "my_model_2.h5"]  # config yr model name
+model_names = ["model.keras", "tuned_model.keras"]  # config yr model name
 model = load_model(model_names[1])  # modify which model is using
 
 img_path = 'adid.jpeg'  # File path to an image for checking
@@ -20,4 +20,5 @@ plt.figure(figsize=(4, 4))
 plt.imshow(img)
 plt.title(f"Class name: {classes[prediction]}")
 plt.axis("off")
+# plt.savefig('inference.png')
 plt.show()
