@@ -2,7 +2,9 @@ import os
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Activation, Dropout, Flatten, Dense, BatchNormalization
 from tensorflow.keras.applications import VGG16
-from config import classes
+from config import train_dir
+
+classes = [name for name in os.listdir(train_dir) if os.path.isdir(os.path.join(train_dir, name)) and name != ".DS_Store"]
 
 gpu_config = False
 if gpu_config:
