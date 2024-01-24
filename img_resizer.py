@@ -53,5 +53,5 @@ def process_folders(source_folder):
 
 
 if __name__ == "__main__":
-    folder_path = "/Users/andy/Downloads/images"  # path to your images
+    folder_path = "dataset"  # path to your images
     process_folders(folder_path)
