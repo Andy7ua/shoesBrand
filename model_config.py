@@ -27,7 +27,7 @@ if not os.path.exists(custom_weights_path):
 
 vgg16_net = VGG16(weights=custom_weights_path, include_top=False, input_shape=input_shape)
 vgg16_net.trainable = False
-# vgg16_net.summary()  # Uncomment if you need the summary
+vgg16_net.summary()  # Comment if you need the summary
 
 model = Sequential()
 model.add(vgg16_net)
@@ -38,4 +38,4 @@ model.add(Dropout(0.2))
 model.add(BatchNormalization())
 model.add(Dense(len(classes), activation='softmax'))
 
-# model.summary()  # Uncomment if you need the summary
+model.summary()  # Comment if you need the summary
