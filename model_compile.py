@@ -34,7 +34,7 @@ if __name__ == "__main__":
     history = model.fit(
                 train_generator,
                 steps_per_epoch=nb_train_samples // batch_size,
-                epochs=10,
+                epochs=15,
                 validation_data=val_generator,
                 validation_steps=nb_validation_samples // batch_size)
 
